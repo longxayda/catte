@@ -1,29 +1,68 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
     background-color: #fff;
-    color: #ff4081;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.container {
-    background: white;
+    color: #ff4081;
     padding: 20px;
-    border-radius: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
+/* Khung chứa nội dung */
+.container {
+    /* max-width: 2000px; */
+    width: 1300px;
+    margin: auto;
+    background: white;
+    /* padding: 20px; */
+}
+
+/* Tiêu đề */
 h1 {
     font-size: 2em;
 }
 
-img {
-    width: 300px;
+/* Khung chứa hình ảnh */
+.image-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /* Hình tự động xuống dòng khi không đủ chỗ */
+    justify-content: center;
+    /* Căn giữa ảnh */
+    gap: 10px;
+    /* Khoảng cách giữa ảnh */
+    padding: 10px;
+}
+
+/* Hình ảnh */
+.image-container img {
+    width: 100%;
+    /* Ảnh co giãn theo màn hình */
+    max-width: 250px;
+    /* Giới hạn kích thước tối đa */
     height: auto;
     border-radius: 10px;
-    margin: 10px 0;
+    /* Bo góc ảnh cho đẹp */
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .image-container img {
+        max-width: 90%;
+        /* Giữ ảnh không quá nhỏ */
+    }
 }
